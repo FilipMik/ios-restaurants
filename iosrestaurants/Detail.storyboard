@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KsP-js-dIa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KsP-js-dIa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="yHx-kk-4G9">
@@ -29,8 +34,8 @@
         <!--Title-->
         <scene sceneID="yAN-4f-kKq">
             <objects>
-                <viewController storyboardIdentifier="DetailStoryboardVC" id="gID-th-gRa" customClass="DetailController" customModule="iosrestaurants" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jJb-NU-mEL">
+                <viewController storyboardIdentifier="DetailStoryboardVC" id="gID-th-gRa" customClass="DetailsFoodViewController" customModule="iosrestaurants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jJb-NU-mEL" customClass="DetailsFoodView" customModule="iosrestaurants" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -190,6 +195,15 @@
                             <constraint firstItem="GAz-p2-yQI" firstAttribute="top" secondItem="pvm-ch-hpT" secondAttribute="top" id="x0B-FH-sN4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pvm-ch-hpT"/>
+                        <connections>
+                            <outlet property="collectionView" destination="exN-10-Fyk" id="Fib-dZ-ST3"/>
+                            <outlet property="hoursLabel" destination="sJ5-PP-FrA" id="iV3-1c-Aei"/>
+                            <outlet property="locationLabel" destination="nYP-V3-7AH" id="e9H-ic-pc4"/>
+                            <outlet property="mapView" destination="VED-qv-4Fz" id="MXw-eb-aW9"/>
+                            <outlet property="pageControl" destination="Dul-pO-hR2" id="QZ6-Dw-9w4"/>
+                            <outlet property="priceLabel" destination="muI-1v-FOD" id="FUn-xc-p7z"/>
+                            <outlet property="ratingLabel" destination="66n-jR-Kty" id="aaI-ps-Mqu"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="GAR-nf-cmw"/>
                     <size key="freeformSize" width="375" height="1024"/>
