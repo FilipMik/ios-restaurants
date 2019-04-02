@@ -13,6 +13,9 @@
 		17DA17CB222BF98200A2ADFD /* iosrestaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17DA17C9222BF98200A2ADFD /* iosrestaurants.xcdatamodeld */; };
 		17DA17CD222BF98200A2ADFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DA17CC222BF98200A2ADFD /* Assets.xcassets */; };
 		17DA17D0222BF98200A2ADFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DA17CE222BF98200A2ADFD /* LaunchScreen.storyboard */; };
+		D04F28D822397E660029FBF8 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04F28D722397E660029FBF8 /* Detail.storyboard */; };
+		D04F28DC2239813A0029FBF8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F28DB2239813A0029FBF8 /* DetailController.swift */; };
+		D04F28DE223982550029FBF8 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F28DD223982550029FBF8 /* AppStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		17DA17CC222BF98200A2ADFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17DA17CF222BF98200A2ADFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17DA17D1222BF98200A2ADFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04F28D722397E660029FBF8 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		D04F28DB2239813A0029FBF8 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		D04F28DD223982550029FBF8 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				17DA17CE222BF98200A2ADFD /* LaunchScreen.storyboard */,
 				17DA17D1222BF98200A2ADFD /* Info.plist */,
 				17DA17C9222BF98200A2ADFD /* iosrestaurants.xcdatamodeld */,
+				D04F28D722397E660029FBF8 /* Detail.storyboard */,
+				D04F28DB2239813A0029FBF8 /* DetailController.swift */,
+				D04F28DD223982550029FBF8 /* AppStoryboard.swift */,
 			);
 			path = iosrestaurants;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 				17DA17D0222BF98200A2ADFD /* LaunchScreen.storyboard in Resources */,
 				17DA17CD222BF98200A2ADFD /* Assets.xcassets in Resources */,
 				17DA17C8222BF98200A2ADFD /* Main.storyboard in Resources */,
+				D04F28D822397E660029FBF8 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04F28DE223982550029FBF8 /* AppStoryboard.swift in Sources */,
 				17DA17C5222BF98200A2ADFD /* ViewController.swift in Sources */,
 				17DA17CB222BF98200A2ADFD /* iosrestaurants.xcdatamodeld in Sources */,
+				D04F28DC2239813A0029FBF8 /* DetailController.swift in Sources */,
 				17DA17C3222BF98200A2ADFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
