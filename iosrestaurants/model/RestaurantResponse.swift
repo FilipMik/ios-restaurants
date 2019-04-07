@@ -10,9 +10,9 @@ import Foundation
 
 
 struct RestaurantResponse: Decodable {
-    let results_found: Int
-    let results_start: Int
-    let results_shown: Int
+    let resultsFound: Int
+    let rasultsStart: Int
+    let resultsShown: Int
     let restaurants: [RestaurantElement]
     
     enum CodingKeys: String, CodingKey {
