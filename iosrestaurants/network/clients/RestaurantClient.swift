@@ -15,7 +15,7 @@ class RestaurantClient: BaseClient {
     typealias RestaurantCompletition = (Result<RestaurantResponse?,APIError>) -> Void
     typealias DailyMenuCompletition = (Result<DailyMenu?,APIError>) -> Void
     
-    init(configuration: URLSessionConfiguration) {
+    init() {
         self.session = URLSession.shared
     }
     

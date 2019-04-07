@@ -16,7 +16,6 @@ enum SearchEndpoint {
 }
 
 extension SearchEndpoint: Endpoint {
-    
     var base: String {
         return "https://developers.zomato.com"
     }
@@ -38,5 +37,4 @@ extension SearchEndpoint: Endpoint {
                     URLQueryItem(name: "lon", value: String(lon))]
         }
     }
-    
 }
