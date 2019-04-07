@@ -12,6 +12,7 @@ import Foundation
 enum SearchEndpoint {
     case search
     case searchWithLimit(count: String)
+    case searchByLocation(lat: Double, lon: Double)
 }
 
 extension SearchEndpoint: Endpoint {
@@ -24,6 +25,7 @@ extension SearchEndpoint: Endpoint {
         switch self {
         case .search: return "/api/v2.1/search"
         case .searchWithLimit: return "/api/v2.1/search"
+        case .searchByLocation: return "/api/v2.1/search"
         }
     }
     
@@ -31,6 +33,9 @@ extension SearchEndpoint: Endpoint {
         switch self {
         case .search: return nil
         case .searchWithLimit(let count): return [URLQueryItem(name: "count", value: count)]
+        case .searchByLocation(let lat, let lon):
+            return [URLQueryItem(name: "lat", value: String(lat)),
+                    URLQueryItem(name: "lon", value: String(lon))]
         }
     }
     
