@@ -19,20 +19,30 @@ class RestaurantClient: BaseClient {
         self.session = URLSession.shared
     }
     
-    func getRestaurants(from searchEndpoint: SearchEndpoint,
-                        completition: @escaping RestaurantCompletition) {
-   
-        fetchData(with: searchEndpoint.request, decode: { json -> RestaurantResponse? in
+    func getRestaurants(completition: @escaping RestaurantCompletition) {
+        let request = SearchEndpoint.search.request
+        
+        fetchData(with: request, decode: { json -> RestaurantResponse? in
             guard let restaurantResponse = json as? RestaurantResponse else { return nil }
             return restaurantResponse
         }, completition: completition)
     }
     
-    func getRestaurantDailyMenu(from dailyMenuEndpoint: DailyMenuEnpoint,
-                                completition: @escaping DailyMenuCompletition) {
-        fetchData(with: dailyMenuEndpoint.request, decode: { json -> DailyMenu? in
+    func getRestaurantDailyMenu(resId id: Int, completition: @escaping DailyMenuCompletition) {
+        let request = DailyMenuEnpoint.restaurantMenu(resId: id).request
+        
+        fetchData(with: request, decode: { json -> DailyMenu? in
             guard let dailyMenu = json as? DailyMenu else { return nil }
             return dailyMenu
+        }, completition: completition)
+    }
+    
+    func getRestaurantsByLocation(lat: Double, lon: Double, completition: @escaping RestaurantCompletition) {
+        let request = SearchEndpoint.searchByLocation(lat: lat, lon: lon).request
+        
+        fetchData(with: request, decode: { (json) -> RestaurantResponse? in
+            guard let restaurantResponse = json as? RestaurantResponse else { return nil }
+            return restaurantResponse
         }, completition: completition)
     }
 }

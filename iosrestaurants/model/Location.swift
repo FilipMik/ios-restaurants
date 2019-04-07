@@ -15,7 +15,7 @@ struct Location: Decodable {
     let city: String
     let cityID: Int
     let lat: String
-    let long: String
+    let lon: String
     let zip: String
     let countryID: Int
     let localityVerbose: String
@@ -26,14 +26,14 @@ struct Location: Decodable {
         case countryID = "country_id"
         case localityVerbose = "locality_verbose"
         case lat = "latitude"
-        case long = "longitude"
+        case lon = "longitude"
         case zip = "zipcode"
     }
 }
 
 extension Location {
     var longitude: Double? {
-        return Double(long)
+        return Double(lon)
     }
     
     var latitude: Double? {
