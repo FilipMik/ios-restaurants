@@ -20,6 +20,7 @@
 		D014A0B0225900060016295A /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014A0AF225900060016295A /* BaseClient.swift */; };
 		D014A0B222590BA80016295A /* RestaurantClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014A0B122590BA80016295A /* RestaurantClient.swift */; };
 		D014A0B422594DBE0016295A /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014A0B322594DBE0016295A /* RestaurantDetail.swift */; };
+		D0353E1F225DDAE500DA8BC6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0353E1E225DDAE500DA8BC6 /* Result.swift */; };
 		D04F28D822397E660029FBF8 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04F28D722397E660029FBF8 /* Detail.storyboard */; };
 		D04F28DC2239813A0029FBF8 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F28DB2239813A0029FBF8 /* DetailController.swift */; };
 		D04F28DE223982550029FBF8 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F28DD223982550029FBF8 /* AppStoryboard.swift */; };
@@ -46,6 +47,7 @@
 		D014A0AF225900060016295A /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
 		D014A0B122590BA80016295A /* RestaurantClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantClient.swift; sourceTree = "<group>"; };
 		D014A0B322594DBE0016295A /* RestaurantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetail.swift; sourceTree = "<group>"; };
+		D0353E1E225DDAE500DA8BC6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D04F28D722397E660029FBF8 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		D04F28DB2239813A0029FBF8 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		D04F28DD223982550029FBF8 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D014A0A42258F2920016295A /* endpoints */,
 				D014A0A62258F2E50016295A /* Endpoint.swift */,
 				D014A0AF225900060016295A /* BaseClient.swift */,
+				D0353E1E225DDAE500DA8BC6 /* Result.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0353E1F225DDAE500DA8BC6 /* Result.swift in Sources */,
 				D04F28DE223982550029FBF8 /* AppStoryboard.swift in Sources */,
 				D06B8FBF225A11460087A909 /* Dish.swift in Sources */,
 				D014A0B0225900060016295A /* BaseClient.swift in Sources */,

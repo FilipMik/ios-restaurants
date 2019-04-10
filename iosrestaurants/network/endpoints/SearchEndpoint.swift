@@ -22,16 +22,18 @@ extension SearchEndpoint: Endpoint {
     
     var path: String {
         switch self {
-        case .search: return "/api/v2.1/search"
-        case .searchWithLimit: return "/api/v2.1/search"
-        case .searchByLocation: return "/api/v2.1/search"
+        case .search,
+             .searchWithLimit,
+             .searchByLocation: return "/api/v2.1/search"
         }
     }
     
     var parameters: [URLQueryItem]? {
         switch self {
-        case .search: return nil
-        case .searchWithLimit(let count): return [URLQueryItem(name: "count", value: count)]
+        case .search:
+            return nil
+        case .searchWithLimit(let count):
+            return [URLQueryItem(name: "count", value: count)]
         case .searchByLocation(let lat, let lon):
             return [URLQueryItem(name: "lat", value: String(lat)),
                     URLQueryItem(name: "lon", value: String(lon))]
