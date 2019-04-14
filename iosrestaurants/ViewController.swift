@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  iosrestaurants
 //
-//  Created by Tatiana Kminiakova on 3.3.19.
+//  Created by Filip Mik on 3.3.19.
 //  Copyright © 2019 pv239. All rights reserved.
 //
 
