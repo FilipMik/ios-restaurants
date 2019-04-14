@@ -226,6 +226,7 @@
                                     <outlet property="ratingLabel" destination="e4z-yo-EeI" id="Eww-hz-BVe"/>
                                     <outlet property="restaurantImageView" destination="Uxe-zC-92Q" id="GjU-ds-W1N"/>
                                     <outlet property="starImageView" destination="Xrq-wA-esR" id="b2W-0V-8a8"/>
+                                    <segue destination="MTE-Rm-OGC" kind="show" id="vto-o5-cma"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -263,7 +264,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rVw-Kg-Rfm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e7h-as-Rnf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RestaurantNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="e7h-as-Rnf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Nkj-uv-yQL">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -291,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8q-Z0-OZs">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1004"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="960"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hGB-wi-gfc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="960"/>
@@ -431,7 +432,7 @@
                                 </constraints>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-e2-vGg">
-                                <rect key="frame" x="168" y="233" width="39" height="37"/>
+                                <rect key="frame" x="168" y="277" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>

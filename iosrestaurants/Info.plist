@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to show you restaurants.</string>
+	<string>We need your location to show nearby restaurants.</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>

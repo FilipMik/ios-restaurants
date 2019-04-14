@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-enum Result<T> {
+enum LocationServiceResult<T> {
     case success(T)
     case failure(Error)
 }
@@ -23,7 +23,7 @@ final class LocationService: NSObject {
         manager.delegate = self
     }
     
-    var newLocation: ((Result<CLLocation>) -> Void)?
+    var newLocation: ((LocationServiceResult<CLLocation>) -> Void)?
     var didChangeStatus: ((Bool) -> Void)?
     
     var status: CLAuthorizationStatus {

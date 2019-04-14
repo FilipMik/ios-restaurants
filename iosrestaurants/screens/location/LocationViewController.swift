@@ -17,7 +17,6 @@ class LocationViewController: UIViewController {
         super.viewDidLoad()
         
         locationView.didTapAllow = { [weak self] in
-            print("tapped")
             self?.locationService?.requestLocationAuthorization()
         }
 
@@ -32,6 +31,14 @@ class LocationViewController: UIViewController {
             switch result {
             case .success(let location):
                 print(location)
+                
+                let restaurantNavigationViewControllerOptional = UIStoryboard
+                    .init(name: "Main", bundle: nil)
+                    .instantiateViewController(withIdentifier: "RestaurantNavigationController") as? UINavigationController
+                
+                if let restaurantNavigationViewController = restaurantNavigationViewControllerOptional {
+                    self?.present(restaurantNavigationViewController, animated: true, completion: nil)
+                }
             case .failure(let error):
                 assertionFailure("Error getting user's location \(error)")
             }

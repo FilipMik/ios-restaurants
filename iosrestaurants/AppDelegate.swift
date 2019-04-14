@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let window = UIWindow()
     let locationService = LocationService()
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,7 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             locationViewController?.locationService = locationService
             window.rootViewController = locationViewController
         default:
-            assertionFailure()
+            let restaurantNavigation = storyboard.instantiateViewController(withIdentifier: "RestaurantNavigationController") as? UINavigationController
+        
+            self.navigationController = restaurantNavigation
+            window.rootViewController = restaurantNavigation
+            locationService.getLocation()
         }
         window.makeKeyAndVisible()
         
