@@ -9,9 +9,26 @@
 import UIKit
 
 class RestaurantTableViewController: UITableViewController {
+    
+    var restaurants = [RestaurantElement]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let client = RestaurantClient()
+        client.getRestaurantsByLocation(lat: 49, lon: 17) { (result) in
+            switch result {
+            case .success(let restaurantsResult):
+                guard let restaurants = restaurantsResult?.restaurants else { return }
+                self.restaurants = restaurants
+            case .failure(let error):
+                print(error)
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,32 +37,20 @@ class RestaurantTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return restaurants.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantTableViewCell
+        
+        let restaurant = restaurants[indexPath.row]
+        cell.initCell(with: restaurant)
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

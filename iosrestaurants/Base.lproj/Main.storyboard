@@ -225,6 +225,7 @@
                                     <outlet property="markerImageView" destination="X8g-vl-ZJg" id="fOr-GC-EDR"/>
                                     <outlet property="ratingLabel" destination="e4z-yo-EeI" id="Eww-hz-BVe"/>
                                     <outlet property="restaurantImageView" destination="Uxe-zC-92Q" id="GjU-ds-W1N"/>
+                                    <outlet property="restaurantNameLabel" destination="2ml-JG-wO3" id="Pam-SA-l9u"/>
                                     <outlet property="starImageView" destination="Xrq-wA-esR" id="b2W-0V-8a8"/>
                                     <segue destination="MTE-Rm-OGC" kind="show" id="vto-o5-cma"/>
                                 </connections>

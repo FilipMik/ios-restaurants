@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RestaurantTableViewCell: UITableViewCell {
     
@@ -28,4 +29,11 @@ class RestaurantTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func initCell(with restaurant: RestaurantElement) {
+        //restaurantNameLabel.text = restaurant.restaurant.name
+        
+        //if let unwrappedRating = restaurant.restaurant.user_rating {
+        //    ratingLabel.text = unwrappedRating.aggregateRating
+        //}
+    }
 }
