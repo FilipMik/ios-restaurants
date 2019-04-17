@@ -1,0 +1,5 @@
+*.xcuserstate
+*.xcuserdatad
+
+build_output
+Pods
