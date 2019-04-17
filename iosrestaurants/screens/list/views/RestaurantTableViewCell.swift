@@ -30,10 +30,12 @@ class RestaurantTableViewCell: UITableViewCell {
     }
 
     func initCell(with restaurant: RestaurantElement) {
-        //restaurantNameLabel.text = restaurant.restaurant.name
+        guard let url = URL(string: restaurant.restaurant.featuredImage) else {
+            return
+        }
         
-        //if let unwrappedRating = restaurant.restaurant.user_rating {
-        //    ratingLabel.text = unwrappedRating.aggregateRating
-        //}
+        restaurantImageView.af_setImage(withURL: url)
+        restaurantNameLabel.text = restaurant.restaurant.name
     }
 }
+
