@@ -30,12 +30,14 @@ class RestaurantTableViewCell: UITableViewCell {
     }
 
     func initCell(with restaurant: RestaurantElement) {
+        restaurantNameLabel.text = restaurant.restaurant.name
+        
         guard let url = URL(string: restaurant.restaurant.featuredImage) else {
             return
         }
-        
         restaurantImageView.af_setImage(withURL: url)
-        restaurantNameLabel.text = restaurant.restaurant.name
+        restaurantImageView.layer.cornerRadius = 8
+        restaurantImageView.clipsToBounds = true
     }
 }
 

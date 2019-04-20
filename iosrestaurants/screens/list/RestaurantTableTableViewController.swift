@@ -20,7 +20,7 @@ class RestaurantTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let client = RestaurantClient()
-        client.getRestaurantsByLocation(lat: 49, lon: 17) { (result) in
+        client.getRestaurantsByLocation(lat: 49.196937, lon: 16.608398) { (result) in
             switch result {
             case .success(let restaurantsResult):
                 guard let restaurants = restaurantsResult?.restaurants else { return }
@@ -50,7 +50,14 @@ class RestaurantTableViewController: UITableViewController {
 
         return cell
     }
- 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let dvc = storyBoard.instantiateViewController(withIdentifier: "DetailStoryboardViewController") as! DetailsFoodViewController
+        
+        dvc.restaurantElement = restaurants[indexPath.row]
+        self.navigationController?.pushViewController(dvc, animated: true)
+    }
 
     /*
     // Override to support conditional editing of the table view.

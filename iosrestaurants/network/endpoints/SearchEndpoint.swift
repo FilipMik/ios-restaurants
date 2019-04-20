@@ -36,7 +36,8 @@ extension SearchEndpoint: Endpoint {
             return [URLQueryItem(name: "count", value: count)]
         case .searchByLocation(let lat, let lon):
             return [URLQueryItem(name: "lat", value: String(lat)),
-                    URLQueryItem(name: "lon", value: String(lon))]
+                    URLQueryItem(name: "lon", value: String(lon)),
+                    URLQueryItem(name: "sort", value: "real_distance")]
         }
     }
 }
