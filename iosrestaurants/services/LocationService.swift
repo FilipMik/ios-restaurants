@@ -38,6 +38,9 @@ final class LocationService: NSObject {
         manager.requestLocation()
     }
     
+    func getCoordinates() -> CLLocation? {
+        return manager.location
+    }
 }
 
 extension LocationService: CLLocationManagerDelegate {

@@ -10,6 +10,17 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
     
+    private var locationService: LocationService
+    
+    init(locationService: LocationService) {
+        self.locationService = locationService
+        super.init(nibName: "RestaurantTableViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     var restaurants = [RestaurantElement]() {
         didSet {
             tableView.reloadData()
@@ -17,10 +28,23 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        if let location = locationService.getCoordinates() {
+            getRestaurants(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        } else {
+            getRestaurants(latitude: 49.196937, longitude: 16.608398)
+        }
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    private func getRestaurants(latitude: Double, longitude: Double) {
         let client = RestaurantClient()
-        client.getRestaurantsByLocation(lat: 49.196937, lon: 16.608398) { (result) in
+        
+        client.getRestaurantsByLocation(lat: latitude, lon: longitude) { (result) in
             switch result {
             case .success(let restaurantsResult):
                 guard let restaurants = restaurantsResult?.restaurants else { return }
@@ -29,12 +53,6 @@ class RestaurantTableViewController: UITableViewController {
                 print(error)
             }
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
