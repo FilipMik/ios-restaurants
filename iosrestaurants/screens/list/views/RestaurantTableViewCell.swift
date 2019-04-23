@@ -29,8 +29,9 @@ class RestaurantTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func initCell(with restaurant: RestaurantElement) {
+    func initCell(with restaurant: RestaurantElement, with distanceString: String) {
         restaurantNameLabel.text = restaurant.restaurant.name
+        locationLabel.text = String(distanceString)
         
         guard let url = URL(string: restaurant.restaurant.featuredImage) else {
             return

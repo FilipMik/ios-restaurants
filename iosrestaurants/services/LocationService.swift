@@ -41,6 +41,16 @@ final class LocationService: NSObject {
     func getCoordinates() -> CLLocation? {
         return manager.location
     }
+    
+    func getDistanceBetweenLocations(
+        loc1Long: Double, loc1Lat: Double,
+        loc2Long: Double, loc2Lat: Double) -> Double {
+        
+        let location1 = CLLocation(latitude: loc1Lat, longitude: loc1Long)
+        let location2 = CLLocation(latitude: loc2Lat, longitude: loc2Long)
+        
+        return location1.distance(from: location2)
+    }
 }
 
 extension LocationService: CLLocationManagerDelegate {

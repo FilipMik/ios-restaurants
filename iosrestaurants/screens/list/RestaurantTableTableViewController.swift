@@ -10,16 +10,8 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
     
-    private var locationService: LocationService
-    
-    init(locationService: LocationService) {
-        self.locationService = locationService
-        super.init(nibName: "RestaurantTableViewController", bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+    var locationService: LocationService = LocationService()
+    weak var activityIndicatorView: UIActivityIndicatorView!
     
     var restaurants = [RestaurantElement]() {
         didSet {
@@ -28,17 +20,19 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        tableView.backgroundView = indicator
+        self.activityIndicatorView = indicator
+        
+        indicator.startAnimating()
+        
         if let location = locationService.getCoordinates() {
             getRestaurants(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         } else {
             getRestaurants(latitude: 49.196937, longitude: 16.608398)
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     private func getRestaurants(latitude: Double, longitude: Double) {
@@ -49,7 +43,9 @@ class RestaurantTableViewController: UITableViewController {
             case .success(let restaurantsResult):
                 guard let restaurants = restaurantsResult?.restaurants else { return }
                 self.restaurants = restaurants
+                self.activityIndicatorView.stopAnimating()
             case .failure(let error):
+                self.activityIndicatorView.stopAnimating()
                 print(error)
             }
         }
@@ -64,7 +60,27 @@ class RestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantTableViewCell
         
         let restaurant = restaurants[indexPath.row]
-        cell.initCell(with: restaurant)
+        var distanceString = ""
+        
+        if let location = locationService.getCoordinates() {
+            
+            let distanceMeters = locationService.getDistanceBetweenLocations(
+                loc1Long: location.coordinate.longitude,
+                loc1Lat: location.coordinate.latitude,
+                loc2Long: restaurant.restaurant.location.longitude!,
+                loc2Lat: restaurant.restaurant.location.latitude!)
+            
+            if (distanceMeters > 1000.0) {
+                distanceString = (distanceMeters / 1000.0).fixedFraction(digits: 1) + " km"
+            } else {
+                distanceString = distanceMeters.fixedFraction(digits: 1) + " m"
+            }
+            
+        } else {
+            distanceString = "-m"
+        }
+        
+        cell.initCell(with: restaurant, with: distanceString)
 
         return cell
     }
@@ -76,50 +92,10 @@ class RestaurantTableViewController: UITableViewController {
         dvc.restaurantElement = restaurants[indexPath.row]
         self.navigationController?.pushViewController(dvc, animated: true)
     }
+}
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+extension FloatingPoint {
+    func fixedFraction(digits: Int) -> String {
+        return String(format: "%.\(digits)f", self as! CVarArg)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
