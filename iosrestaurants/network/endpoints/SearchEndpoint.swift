@@ -12,7 +12,7 @@ import Foundation
 enum SearchEndpoint {
     case search
     case searchWithLimit(count: String)
-    case searchByLocation(lat: Double, lon: Double)
+    case searchByLocation(lat: Double, lon: Double, start: Int)
 }
 
 extension SearchEndpoint: Endpoint {
@@ -34,10 +34,11 @@ extension SearchEndpoint: Endpoint {
             return nil
         case .searchWithLimit(let count):
             return [URLQueryItem(name: "count", value: count)]
-        case .searchByLocation(let lat, let lon):
+        case .searchByLocation(let lat, let lon, let start):
             return [URLQueryItem(name: "lat", value: String(lat)),
                     URLQueryItem(name: "lon", value: String(lon)),
-                    URLQueryItem(name: "sort", value: "real_distance")]
+                    URLQueryItem(name: "sort", value: "real_distance"),
+                    URLQueryItem(name: "start", value: String(start))]
         }
     }
 }

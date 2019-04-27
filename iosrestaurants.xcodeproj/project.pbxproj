@@ -13,6 +13,8 @@
 		17DA17CB222BF98200A2ADFD /* iosrestaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17DA17C9222BF98200A2ADFD /* iosrestaurants.xcdatamodeld */; };
 		17DA17CD222BF98200A2ADFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DA17CC222BF98200A2ADFD /* Assets.xcassets */; };
 		17DA17D0222BF98200A2ADFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DA17CE222BF98200A2ADFD /* LaunchScreen.storyboard */; };
+		96A89C7B22746B7F00D54B89 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A89C7A22746B7F00D54B89 /* LoadingCell.xib */; };
+		96A89C7D22746C8700D54B89 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A89C7C22746C8700D54B89 /* LoadingCell.swift */; };
 		96F2773B226330E800BC78F5 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2772E226330E800BC78F5 /* LocationViewController.swift */; };
 		96F2773C226330E800BC78F5 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2772F226330E800BC78F5 /* LocationView.swift */; };
 		96F2773D226330E800BC78F5 /* DetailsFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F27732226330E800BC78F5 /* DetailsFoodView.swift */; };
@@ -50,6 +52,8 @@
 		17DA17D1222BF98200A2ADFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7DD7935AA58AE19C70899C /* Pods-iosrestaurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosrestaurants.debug.xcconfig"; path = "Target Support Files/Pods-iosrestaurants/Pods-iosrestaurants.debug.xcconfig"; sourceTree = "<group>"; };
 		6DBB9D39E4E4324AEAC4B9F2 /* Pods_iosrestaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosrestaurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A89C7A22746B7F00D54B89 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		96A89C7C22746C8700D54B89 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		96F2772E226330E800BC78F5 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		96F2772F226330E800BC78F5 /* LocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		96F27732226330E800BC78F5 /* DetailsFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsFoodView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				17DA17C9222BF98200A2ADFD /* iosrestaurants.xcdatamodeld */,
 				D04F28D722397E660029FBF8 /* Detail.storyboard */,
 				D04F28DD223982550029FBF8 /* AppStoryboard.swift */,
+				96A89C7A22746B7F00D54B89 /* LoadingCell.xib */,
 			);
 			path = iosrestaurants;
 			sourceTree = "<group>";
@@ -140,7 +145,6 @@
 				1C7DD7935AA58AE19C70899C /* Pods-iosrestaurants.debug.xcconfig */,
 				F92C3233ECF91C3C33A87BB6 /* Pods-iosrestaurants.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				96F27737226330E800BC78F5 /* RestaurantTableViewCell.swift */,
+				96A89C7C22746C8700D54B89 /* LoadingCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				17DA17D0222BF98200A2ADFD /* LaunchScreen.storyboard in Resources */,
 				17DA17CD222BF98200A2ADFD /* Assets.xcassets in Resources */,
 				17DA17C8222BF98200A2ADFD /* Main.storyboard in Resources */,
+				96A89C7B22746B7F00D54B89 /* LoadingCell.xib in Resources */,
 				D04F28D822397E660029FBF8 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +399,7 @@
 				96F27742226330E800BC78F5 /* LocationService.swift in Sources */,
 				D014A0B222590BA80016295A /* RestaurantClient.swift in Sources */,
 				96F2773B226330E800BC78F5 /* LocationViewController.swift in Sources */,
+				96A89C7D22746C8700D54B89 /* LoadingCell.swift in Sources */,
 				17DA17C3222BF98200A2ADFD /* AppDelegate.swift in Sources */,
 				96F2773D226330E800BC78F5 /* DetailsFoodView.swift in Sources */,
 				96F2773C226330E800BC78F5 /* LocationView.swift in Sources */,
