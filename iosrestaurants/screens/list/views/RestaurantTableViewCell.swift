@@ -8,9 +8,10 @@
 
 import UIKit
 import AlamofireImage
+import Alamofire
 
 class RestaurantTableViewCell: UITableViewCell {
-    
+        
     @IBOutlet weak var restaurantImageView: UIImageView!
     @IBOutlet weak var markerImageView: UIImageView!
     @IBOutlet weak var starImageView: UIImageView!
@@ -33,10 +34,19 @@ class RestaurantTableViewCell: UITableViewCell {
         restaurantNameLabel.text = restaurant.restaurant.name
         locationLabel.text = String(distanceString)
         
+        if let rating = restaurant.restaurant.user_rating {
+            ratingLabel.text = rating.ratingText
+            ratingLabel.textColor = UIColor(rgb: Int(rating.ratingColor, radix: 16)!)
+        } else {
+            ratingLabel.text = "Not rated"
+            ratingLabel.textColor = UIColor(rgb: Int("CBCBC8", radix: 16)!)
+        }
+        
         guard let url = URL(string: restaurant.restaurant.featuredImage) else {
             return
         }
         restaurantImageView.af_setImage(withURL: url)
+        
         restaurantImageView.layer.cornerRadius = 8
         restaurantImageView.clipsToBounds = true
     }

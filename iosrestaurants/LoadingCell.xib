@@ -13,26 +13,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingCell" customModule="iosrestaurants" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kjA-wu-GZq">
-                    <rect key="frame" x="177" y="14" width="20" height="20"/>
+                    <rect key="frame" x="177" y="63" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kjA-wu-GZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="177" id="Ilf-OW-YfG"/>
-                <constraint firstItem="kjA-wu-GZq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="Lib-GN-oNK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kjA-wu-GZq" secondAttribute="trailing" constant="178" id="SPz-Wo-O0B"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kjA-wu-GZq" secondAttribute="bottom" constant="15" id="yCd-Wd-1XZ"/>
+                <constraint firstItem="kjA-wu-GZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="177" id="3f4-y5-AnA"/>
+                <constraint firstItem="kjA-wu-GZq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="63" id="gDe-ZI-BSl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kjA-wu-GZq" secondAttribute="trailing" constant="178" id="stK-jU-sZQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kjA-wu-GZq" secondAttribute="bottom" constant="63" id="zua-KB-DFj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="spinner" destination="kjA-wu-GZq" id="a9D-Fo-gBe"/>
+                <outlet property="spinner" destination="kjA-wu-GZq" id="JwE-Rd-Bvs"/>
             </connections>
-            <point key="canvasLocation" x="94" y="113"/>
+            <point key="canvasLocation" x="93.599999999999994" y="69.265367316341838"/>
         </view>
     </objects>
 </document>
