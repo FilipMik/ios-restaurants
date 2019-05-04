@@ -37,3 +37,19 @@ struct RestaurantDetail: Decodable {
         case featuredImage = "featured_image"
     }
 }
+
+extension RestaurantDetail {
+    var imageUrl: URL? {
+        if featuredImage.isEmpty {
+            return nil
+        }
+        if let urlComponent = URLComponents(string: featuredImage) {
+            let paramFreeUrl = "\(urlComponent.scheme ?? "")://\(urlComponent.host ?? "")\(urlComponent.path)"
+            
+            if let url = URL(string: paramFreeUrl) {
+                return url
+            }
+        }
+        return nil
+    }
+}

@@ -8,18 +8,9 @@
 
 import Foundation
 
-
-struct DailyResponse: Decodable {
-    let dailyMenu: [DailyMenu]?
-    
-    enum CodingKeys: String, CodingKey {
-        case dailyMenu = "daily_menu"
-    }
-}
-
 struct DailyMenu: Decodable {
     let dailyMenuID, name, startDate, endDate: String?
-    let dishes: [Dish]?
+    let dishes: [DishElement]?
     
     enum CodingKeys: String, CodingKey {
         case dailyMenuID = "daily_menu_id"
@@ -27,5 +18,13 @@ struct DailyMenu: Decodable {
         case startDate = "start_date"
         case endDate = "end_date"
         case dishes
+    }
+}
+
+struct DishElement: Decodable {
+    let dish: Dish?
+    
+    enum CodingKeys: String, CodingKey {
+        case dish
     }
 }
