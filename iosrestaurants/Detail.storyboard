@@ -127,7 +127,7 @@
                                                                     <constraint firstAttribute="height" constant="2" id="Rlq-hL-slX"/>
                                                                 </constraints>
                                                             </view>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not_available_img" translatesAutoresizingMaskIntoConstraints="NO" id="ttW-A9-HPO">
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not_available_img" translatesAutoresizingMaskIntoConstraints="NO" id="ttW-A9-HPO">
                                                                 <rect key="frame" x="0.0" y="76" width="367" height="286"/>
                                                             </imageView>
                                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1su-Bl-Yvz">
@@ -269,7 +269,7 @@
     <resources>
         <image name="IC Query Builder 24px" width="20" height="20"/>
         <image name="IC Star 24px" width="20" height="19"/>
-        <image name="not_available_img" width="480" height="480"/>
+        <image name="not_available_img" width="198" height="246"/>
         <image name="restaurant_placeholder" width="750" height="300"/>
     </resources>
 </document>
