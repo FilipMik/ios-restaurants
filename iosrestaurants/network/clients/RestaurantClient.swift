@@ -37,8 +37,8 @@ class RestaurantClient: BaseClient {
         }, completition: completition)
     }
     
-    func getRestaurantsByLocation(lat: Double, lon: Double, completition: @escaping RestaurantCompletition) {
-        let request = SearchEndpoint.searchByLocation(lat: lat, lon: lon).request
+    func getRestaurantsByLocation(lat: Double, lon: Double, start: Int, completition: @escaping RestaurantCompletition) {
+        let request = SearchEndpoint.searchByLocation(lat: lat, lon: lon, start: start).request
         
         fetchData(with: request, decode: { (json) -> RestaurantResponse? in
             guard let restaurantResponse = json as? RestaurantResponse else { return nil }
