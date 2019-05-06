@@ -113,10 +113,11 @@ import MapKit
 }
 
 extension UIView {
-    func roundCorners(corners:UIRectCorner, radius: CGFloat)
-    {
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let bounds = UIScreen.main.bounds
+        let tableViewBounds = CGRect(x: 0, y: 0, width: bounds.width, height: self.bounds.height)
         let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+        maskLayer.path = UIBezierPath(roundedRect: tableViewBounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
         self.layer.mask = maskLayer
     }
 }

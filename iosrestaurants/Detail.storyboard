@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -38,13 +38,13 @@
                                                                 <color key="backgroundColor" red="0.75212166879999998" green="0.75212166879999998" blue="0.75212166879999998" alpha="0.82769691779999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jb-BQ-N9H">
-                                                                <rect key="frame" x="10" y="88" width="68.5" height="30"/>
+                                                                <rect key="frame" x="10" y="88" width="68.333333333333329" height="30"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="place-label" text="Place" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnc-gJ-OGA">
-                                                                <rect key="frame" x="10" y="122" width="37.5" height="18"/>
+                                                                <rect key="frame" x="10" y="122" width="37.666666666666664" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                                                 <rect key="frame" x="0.0" y="76" width="367" height="286"/>
                                                             </imageView>
                                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1su-Bl-Yvz">
-                                                                <rect key="frame" x="0.0" y="172.5" width="375" height="25"/>
+                                                                <rect key="frame" x="0.0" y="172.66666666666669" width="375" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="9aa-91-95p"/>
                                                                 </constraints>
@@ -147,7 +147,7 @@
                                                                         <rect key="frame" x="0.0" y="28" width="359" height="44"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="dailyMenyCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LTN-Qd-0vx" id="H7r-jm-Be8" customClass="DailyMenuTableViewCell" customModule="iosrestaurants" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.666666666666664"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                         </tableViewCellContentView>
                                                                     </tableViewCell>
