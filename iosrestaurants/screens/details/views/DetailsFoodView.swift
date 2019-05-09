@@ -87,6 +87,11 @@ import MapKit
     
     func showRestaurantRating(rating: String) {
         switch rating {
+        case "Poor":
+            fifthStar?.isHidden = true
+            fourthStar?.isHidden = true
+            thirdStar?.isHidden = true
+            secondStar?.isHidden = true
         case "Good":
             fifthStar?.isHidden = true
             fourthStar?.isHidden = true

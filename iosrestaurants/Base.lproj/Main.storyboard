@@ -35,7 +35,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-vR-E3d">
-                                        <rect key="frame" x="16" y="199.66666666666663" width="382.00000000000011" height="179.33333333333337"/>
+                                        <rect key="frame" x="16" y="199.66666666666663" width="382" height="179.33333333333337"/>
                                         <edgeInsets key="layoutMargins" top="40" left="8" bottom="8" right="8"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" text="We need your GPS location to successfully display nearby restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-0E-WTr">
