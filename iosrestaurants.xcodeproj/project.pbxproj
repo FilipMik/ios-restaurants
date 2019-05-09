@@ -38,6 +38,7 @@
 		D06B8FBB2259E6B10087A909 /* DailyMenuEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B8FBA2259E6B10087A909 /* DailyMenuEndpoint.swift */; };
 		D06B8FBD225A11150087A909 /* DailyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B8FBC225A11150087A909 /* DailyMenu.swift */; };
 		D06B8FBF225A11460087A909 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B8FBE225A11460087A909 /* Dish.swift */; };
+		D098501522806810006798EF /* DailyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098501422806810006798EF /* DailyResponse.swift */; };
 		D0FF1E9A225950F900DD528D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF1E99225950F900DD528D /* Location.swift */; };
 		D0FF1E9C2259516400DD528D /* UserRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF1E9B2259516400DD528D /* UserRating.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		D06B8FBA2259E6B10087A909 /* DailyMenuEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMenuEndpoint.swift; sourceTree = "<group>"; };
 		D06B8FBC225A11150087A909 /* DailyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMenu.swift; sourceTree = "<group>"; };
 		D06B8FBE225A11460087A909 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		D098501422806810006798EF /* DailyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyResponse.swift; sourceTree = "<group>"; };
 		D0FF1E99225950F900DD528D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D0FF1E9B2259516400DD528D /* UserRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRating.swift; sourceTree = "<group>"; };
 		F92C3233ECF91C3C33A87BB6 /* Pods-iosrestaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosrestaurants.release.xcconfig"; path = "Target Support Files/Pods-iosrestaurants/Pods-iosrestaurants.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				D0FF1E9B2259516400DD528D /* UserRating.swift */,
 				D06B8FBC225A11150087A909 /* DailyMenu.swift */,
 				D06B8FBE225A11460087A909 /* Dish.swift */,
+				D098501422806810006798EF /* DailyResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				17DA17C5222BF98200A2ADFD /* ViewController.swift in Sources */,
 				D06B8FBB2259E6B10087A909 /* DailyMenuEndpoint.swift in Sources */,
 				96F2773F226330E800BC78F5 /* RestaurantTableTableViewController.swift in Sources */,
+				D098501522806810006798EF /* DailyResponse.swift in Sources */,
 				17DA17CB222BF98200A2ADFD /* iosrestaurants.xcdatamodeld in Sources */,
 				D014A0AC2258FF250016295A /* RestaurantResponse.swift in Sources */,
 				D0FF1E9A225950F900DD528D /* Location.swift in Sources */,

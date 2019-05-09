@@ -22,3 +22,4 @@ struct RestaurantResponse: Decodable {
         case restaurants
     }
 }
+

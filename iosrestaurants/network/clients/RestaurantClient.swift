@@ -13,7 +13,7 @@ class RestaurantClient: BaseClient {
     let session: URLSession
     
     typealias RestaurantCompletition = (Result<RestaurantResponse?,APIError>) -> Void
-    typealias DailyMenuCompletition = (Result<DailyMenu?,APIError>) -> Void
+    typealias DailyMenuCompletition = (Result<DailyResponse?,APIError>) -> Void
     
     init() {
         self.session = URLSession.shared
@@ -31,8 +31,8 @@ class RestaurantClient: BaseClient {
     func getRestaurantDailyMenu(resId id: Int, completition: @escaping DailyMenuCompletition) {
         let request = DailyMenuEnpoint.restaurantMenu(resId: id).request
         
-        fetchData(with: request, decode: { json -> DailyMenu? in
-            guard let dailyMenu = json as? DailyMenu else { return nil }
+        fetchData(with: request, decode: { json -> DailyResponse? in
+            guard let dailyMenu = json as? DailyResponse else { return nil }
             return dailyMenu
         }, completition: completition)
     }
