@@ -10,7 +10,6 @@ import Foundation
 
 
 struct UserRating: Decodable {
-    let fakeReviewsCount: Int
     let ratingText: String?
     let ratingColor: String
     let ratingToolTip: String?
@@ -19,7 +18,6 @@ struct UserRating: Decodable {
     enum CodingKeys: String, CodingKey {
         case ratingColor = "rating_color"
         case ratingToolTip = "rating_tool_tip"
-        case fakeReviewsCount = "has_fake_reviews"
         case ratingText = "rating_text"
     }
 }

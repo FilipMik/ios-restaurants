@@ -35,7 +35,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-vR-E3d">
-                                        <rect key="frame" x="16" y="199.66666666666663" width="382" height="179.33333333333337"/>
+                                        <rect key="frame" x="16" y="199.66666666666663" width="382.00000000000011" height="179.33333333333337"/>
                                         <edgeInsets key="layoutMargins" top="40" left="8" bottom="8" right="8"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" text="We need your GPS location to successfully display nearby restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-0E-WTr">
@@ -344,24 +344,30 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nDV-yc-reX">
-                                                                <rect key="frame" x="246" y="16" width="160" height="32"/>
+                                                                <rect key="frame" x="306" y="16" width="100" height="20"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="X9F-nb-dbw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="20" id="0Cz-X8-nOY"/>
+                                                                        </constraints>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="4wY-Fe-HYw">
-                                                                        <rect key="frame" x="32" y="0.0" width="32" height="32"/>
+                                                                        <rect key="frame" x="20" y="0.0" width="20" height="20"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="pau-6T-fs8">
-                                                                        <rect key="frame" x="64" y="0.0" width="32" height="32"/>
+                                                                        <rect key="frame" x="40" y="0.0" width="20" height="20"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-eG-fsx">
-                                                                        <rect key="frame" x="96" y="0.0" width="32" height="32"/>
+                                                                        <rect key="frame" x="60" y="0.0" width="20" height="20"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="xZY-65-QxS">
-                                                                        <rect key="frame" x="128" y="0.0" width="32" height="32"/>
+                                                                        <rect key="frame" x="80" y="0.0" width="20" height="20"/>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="JUc-SN-dWO"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -519,7 +525,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IC Query Builder 24px" width="20" height="20"/>
+        <image name="IC Query Builder 24px" width="32" height="32"/>
         <image name="IC Star 24px" width="32" height="32"/>
         <image name="not_available_img" width="198" height="246"/>
         <image name="pin" width="443" height="720"/>
