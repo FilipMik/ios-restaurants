@@ -35,7 +35,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-vR-E3d">
-                                        <rect key="frame" x="16" y="199.66666666666663" width="382" height="179.33333333333337"/>
+                                        <rect key="frame" x="16" y="199.66666666666663" width="382.00000000000011" height="179.33333333333337"/>
                                         <edgeInsets key="layoutMargins" top="40" left="8" bottom="8" right="8"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" text="We need your GPS location to successfully display nearby restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-0E-WTr">
@@ -343,30 +343,38 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nDV-yc-reX">
-                                                                <rect key="frame" x="306" y="16" width="100" height="20"/>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nDV-yc-reX">
+                                                                <rect key="frame" x="282" y="16" width="124" height="24"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="X9F-nb-dbw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="0Cz-X8-nOY"/>
+                                                                            <constraint firstAttribute="width" constant="24" id="0Cz-X8-nOY"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="4H7-fN-WVJ"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="4wY-Fe-HYw">
-                                                                        <rect key="frame" x="20" y="0.0" width="20" height="20"/>
+                                                                        <rect key="frame" x="25" y="0.0" width="24" height="24"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="pau-6T-fs8">
-                                                                        <rect key="frame" x="40" y="0.0" width="20" height="20"/>
+                                                                        <rect key="frame" x="50" y="0.0" width="24" height="24"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-eG-fsx">
-                                                                        <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                                        <rect key="frame" x="75" y="0.0" width="24" height="24"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star 24px" translatesAutoresizingMaskIntoConstraints="NO" id="xZY-65-QxS">
-                                                                        <rect key="frame" x="80" y="0.0" width="20" height="20"/>
+                                                                        <rect key="frame" x="100" y="0.0" width="24" height="24"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="JUc-SN-dWO"/>
+                                                                    <constraint firstItem="pau-6T-fs8" firstAttribute="height" secondItem="X9F-nb-dbw" secondAttribute="height" id="3Ll-cf-ebh"/>
+                                                                    <constraint firstItem="dHu-eG-fsx" firstAttribute="height" secondItem="X9F-nb-dbw" secondAttribute="height" id="6d5-im-IVM"/>
+                                                                    <constraint firstItem="dHu-eG-fsx" firstAttribute="width" secondItem="X9F-nb-dbw" secondAttribute="width" id="FA4-OX-AaC"/>
+                                                                    <constraint firstItem="pau-6T-fs8" firstAttribute="width" secondItem="X9F-nb-dbw" secondAttribute="width" id="FDC-Ya-cwl"/>
+                                                                    <constraint firstItem="4wY-Fe-HYw" firstAttribute="width" secondItem="X9F-nb-dbw" secondAttribute="width" id="MFY-6w-F4j"/>
+                                                                    <constraint firstItem="4wY-Fe-HYw" firstAttribute="height" secondItem="X9F-nb-dbw" secondAttribute="height" id="TrZ-nq-6wI"/>
+                                                                    <constraint firstItem="xZY-65-QxS" firstAttribute="height" secondItem="X9F-nb-dbw" secondAttribute="height" id="aiW-Cz-FrE"/>
+                                                                    <constraint firstItem="xZY-65-QxS" firstAttribute="width" secondItem="X9F-nb-dbw" secondAttribute="width" id="uCv-sQ-Xqr"/>
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
@@ -508,9 +516,18 @@
                         <connections>
                             <outlet property="dateLabel" destination="sW4-8R-63D" id="I4e-Xw-l25"/>
                             <outlet property="dishTableView" destination="fu0-SD-AY6" id="cw2-mg-6Mt"/>
+                            <outlet property="fifthStar" destination="X9F-nb-dbw" id="hyK-Tb-CL8"/>
+                            <outlet property="firstStar" destination="xZY-65-QxS" id="hGa-ev-vTy"/>
+                            <outlet property="fourthStar" destination="4wY-Fe-HYw" id="PV9-Yo-1Gh"/>
                             <outlet property="loadingIndicator" destination="Sql-W3-VGc" id="68h-02-uUL"/>
+                            <outlet property="locationLabel" destination="Uyv-LD-v7p" id="p9x-1s-LdM"/>
                             <outlet property="mapView" destination="lfj-sQ-GD0" id="JFC-bw-Yi9"/>
+                            <outlet property="nameLabel" destination="Aun-Q1-9hy" id="QLt-TI-irT"/>
                             <outlet property="notAvailableImageView" destination="HXm-WY-HZj" id="YoR-bN-7PH"/>
+                            <outlet property="restaurantImageView" destination="Tjr-Gk-7al" id="bxa-2h-wVS"/>
+                            <outlet property="secondStar" destination="dHu-eG-fsx" id="A71-q3-e5h"/>
+                            <outlet property="tableViewBackgroundView" destination="ORE-91-1za" id="Yc3-r2-VcG"/>
+                            <outlet property="thirdStar" destination="pau-6T-fs8" id="UMv-Gw-IFk"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="HSX-Vf-fHa"/>
