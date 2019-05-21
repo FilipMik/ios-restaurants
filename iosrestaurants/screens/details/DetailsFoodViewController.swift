@@ -23,14 +23,13 @@ class DetailsFoodViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = restaurantElement?.restaurant.name
         // Do any additional setup after loading the view.
         if let restaurantElement = restaurantElement {
             detailsFoodView?.initDetail(with: restaurantElement)
         }
         
         fetchData()
-        
+        self.title = ""
         self.detailsFoodView?.dishTableView?.delegate = self
         self.detailsFoodView?.dishTableView?.dataSource = self
         self.detailsFoodView?.initTopRoundedTableView()

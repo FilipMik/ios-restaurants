@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Darwin
 
 @IBDesignable class LocationView: BaseView {
     
@@ -20,6 +21,6 @@ import UIKit
     }
     
     @IBAction func denyAction(_ sender: UIButton) {
-        
+        exit(0)
     }
 }
